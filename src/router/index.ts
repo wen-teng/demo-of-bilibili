@@ -1,7 +1,7 @@
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-export default VueRouter.createRouter({
-  history: VueRouter.createWebHistory(),
+export default createRouter({
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
