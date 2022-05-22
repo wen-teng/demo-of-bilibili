@@ -20,7 +20,7 @@ module.exports = {
     // 兼容：vue3的不使用分号结尾
     semi: ['error', 'never'],
 
-    // 修复 - Typescript eslint-缺少文件扩展名“ ts”导入/扩展名
+    // Typescript eslint-缺少文件扩展名“ ts”导入/扩展名
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -31,6 +31,17 @@ module.exports = {
         tsx: 'never',
       },
     ],
+
+    // 兼容typescript里的defineEmits定义的函数提示no-unused-vars错误
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
+
+    // 兼容typescript里的defineEmits定义的函数提示no-spaced-func错误
+    'no-spaced-func': 'off',
+
+    // 兼容typescript里的defineEmits定义的函数提示func-call-spacing错误
+    'func-call-spacing': 'off',
+    '@typescript-eslint/func-call-spacing': ['error'],
   },
   settings: {
     // 修复 - 将eslint与typescript一起使用-无法解析模块的路径
