@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-recommended',
     'airbnb-base',
   ],
   parserOptions: {
@@ -20,21 +20,21 @@ module.exports = {
     // 兼容：vue3的不使用分号结尾
     semi: ['error', 'never'],
 
-    // Typescript eslint-缺少文件扩展名“ ts”导入/扩展名
+    // 兼容Typescript里使用import导入ts文件，eslint提示未声明扩展名
     'import/extensions': [
       'error',
       'ignorePackages',
       {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
+        js: 'never', jsx: 'never', ts: 'never', tsx: 'never',
       },
     ],
 
     // 兼容typescript里的defineEmits定义的函数提示no-unused-vars错误
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error'],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
+    ],
 
     // 兼容typescript里的defineEmits定义的函数提示no-spaced-func错误
     'no-spaced-func': 'off',
