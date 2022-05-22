@@ -20,6 +20,12 @@ module.exports = {
     // 兼容：vue3的不使用分号结尾
     semi: ['error', 'never'],
 
+    'vue/html-self-closing': ['error', {
+      html: { normal: 'never', void: 'always' },
+      svg: 'always',
+      math: 'always',
+    }],
+
     // 兼容Typescript里使用import导入ts文件，eslint提示未声明扩展名
     'import/extensions': [
       'error',
