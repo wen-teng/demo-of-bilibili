@@ -17,9 +17,10 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    // 兼容：vue3的不使用分号结尾
+    // 兼容vue3的不使用分号结尾
     semi: ['error', 'never'],
 
+    // 兼容vue里的html对self-closing合理的写法
     'vue/html-self-closing': ['error', {
       html: { normal: 'never', void: 'always' },
       svg: 'always',
