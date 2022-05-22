@@ -17,6 +17,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    // 兼容：vue3的不使用分号结尾
     semi: ['error', 'never'],
 
     // 修复 - Typescript eslint-缺少文件扩展名“ ts”导入/扩展名
